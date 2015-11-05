@@ -26,7 +26,7 @@ public class AsyncTest  {
                      * 小王调用小李中的方法，在这里注册回调接口
                      * 这就相当于A类调用B的方法C
                      */
-                    for (Integer i=0;i<10;i++)
+                    for (Integer i=0;i<100;i++)
                     {
                         System.out.println(MSG1+i);
                     }

@@ -10,10 +10,9 @@ public class Asynccall implements CallBackTest{
         AsyncTest T2=new AsyncTest("test1:");
         AsyncTest T3=new AsyncTest("test2:");
         T2.setQuestionListener(this);
-        T2.TestStart("Start Test");
-
         T3.setQuestionListener(this);
-        T3.TestStart("Start Test2");
+        T2.TestStart("Start Test:");
+        T3.TestStart("Start Test2:");
     }
         @Override
      public void solve(String result) {
