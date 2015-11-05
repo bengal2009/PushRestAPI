@@ -9,8 +9,9 @@ interface CallBackTest {
     public void solve(String result);
 }
 
-public class AsyncTest implements CallBackTest {
+public class AsyncTest  {
     String Msg;
+    CallBackTest call1;
     public AsyncTest(String s1){
         this.Msg=s1;
     }
@@ -29,9 +30,10 @@ public class AsyncTest implements CallBackTest {
                     {
                         System.out.println(MSG1+i);
                     }
-                    solve(Msg);
+                    call1.solve(Msg);
                 }
             }).start();
+
         }catch (Exception E)
         {
             E.printStackTrace();
@@ -39,7 +41,7 @@ public class AsyncTest implements CallBackTest {
         //小网问完问题挂掉电话就去干其他的事情了，诳街去了
       System.out.print("Testing Start");
     }
-    public void solve(String result){
-        System.out.println(result);
+    public void setQuestionListener(CallBackTest questionListener) {
+        this.call1= questionListener;
     }
 }
